@@ -1,0 +1,53 @@
+@import "variables"
+@import "mixin"
+
+*::-webkit-scrollbar
+  width: 4px
+*::-webkit-scrollbar-thumb
+  background-color: $hack-green
+
+body
+  font-family: 'Mukta Mahee', sans-serif
+  overflow: hidden
+  color: $main-txt
+  background: $bg
+  #main-container
+    height: 90vh
+    overflow: auto
+    #messages
+      list-style-type: none
+      margin: 0
+      padding: 0
+      li
+        padding: 5px 10px
+      li:nth-child(even)
+        background: $soft-black
+      li:nth-child(odd)
+        background: $grey
+  #input-container
+    height: 10vh
+    display: flex
+    align-items: center
+    justify-content: center
+    background: $bg
+  #dialog
+    text-align: center
+    #input-nick.form-control
+      &:focus
+        outline: none
+        box-shadow: none
+  button.btn
+    margin-top: 1em
+  .ui-draggable .ui-dialog-titlebar
+    @include flexCenter
+  .ui-dialog
+    padding: 0
+    .ui-dialog-titlebar-close
+      @include flexCenter
+      margin: 0
+      top: 25%
+      &:focus
+        outline: none
+      &:after
+        content: '✖'
+        font-size: 10px

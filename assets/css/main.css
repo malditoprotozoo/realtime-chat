@@ -1,0 +1,88 @@
+@charset "UTF-8";
+*::-webkit-scrollbar {
+  width: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #64E018;
+}
+
+body {
+  font-family: 'Mukta Mahee', sans-serif;
+  overflow: hidden;
+  color: #C5C8C6;
+  background: #1D1F21;
+}
+
+body #main-container {
+  height: 90vh;
+  overflow: auto;
+}
+
+body #main-container #messages {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+body #main-container #messages li {
+  padding: 5px 10px;
+}
+
+body #main-container #messages li:nth-child(even) {
+  background: #282A2E;
+}
+
+body #main-container #messages li:nth-child(odd) {
+  background: #373B41;
+}
+
+body #input-container {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1D1F21;
+}
+
+body #dialog {
+  text-align: center;
+}
+
+body #dialog #input-nick.form-control:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+body button.btn {
+  margin-top: 1em;
+}
+
+body .ui-draggable .ui-dialog-titlebar {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+body .ui-dialog {
+  padding: 0;
+}
+
+body .ui-dialog .ui-dialog-titlebar-close {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin: 0;
+  top: 25%;
+}
+
+body .ui-dialog .ui-dialog-titlebar-close:focus {
+  outline: none;
+}
+
+body .ui-dialog .ui-dialog-titlebar-close:after {
+  content: '✖';
+  font-size: 10px;
+}
